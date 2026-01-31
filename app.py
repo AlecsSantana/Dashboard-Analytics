@@ -2,14 +2,14 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# --- Configuração da Página ---
+
 st.set_page_config(
     page_title="Dashboard de Salários na Área de Dados",
     page_icon="📊",
-    layout="wide", # Corrigido de "whide" para "wide"
+    layout="wide", 
 )
 
-# --- Estilização Customizada (Filtros Roxos) ---
+
 st.markdown("""
     <style>
     /* Cor de fundo da barra lateral */
@@ -31,14 +31,14 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- Carregamento dos dados ---
+
 @st.cache_data
 def load_data():
     return pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
 
 df = load_data()
 
-# --- Barra Lateral (Filtros) ---
+
 st.sidebar.header(" Filtros")
 
 anos_disponiveis = sorted(df['ano'].unique())
@@ -130,4 +130,6 @@ with col_graf4:
         st.plotly_chart(grafico_paises, use_container_width=True)
 
 st.subheader("Dados Detalhados")
+
 st.dataframe(df_filtrado)
+#by:alecs

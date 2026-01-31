@@ -15,3 +15,4 @@ Top 10 Rankings: Visual identification of the highest-paying job titles.
 Statistical Distribution: Insights into salary ranges and density.
 Global Heatmap: Salary distribution mapped by professional residency.
 Work Model Analysis: Comparative view of Remote vs. In-person proportions.
+Project developed during Alura's "Imersão Dados com Python" event. (Projeto desenvolvido durante a Imersão Dados com Python da Alura)
